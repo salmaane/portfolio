@@ -1,0 +1,465 @@
+:root {
+    --primaryColor:#ff274b;
+    --secondaryColor:#f7bcf7;
+    --lightColor:#ffffff;
+    --bgColor1:#171a1c;
+    --bgColor2:#22282a;
+    --padding:8%;
+}
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    text-decoration: none;
+}
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:16px;
+    color: var(--lightColor);
+}
+span {
+    color:var(--primaryColor);
+}
+h1 {
+    font-size:3rem;
+    margin: 1rem 0;
+    word-spacing: -8px;
+}
+h2 {
+    font-size: 1.8rem;
+    letter-spacing:0.12rem;
+    cursor:pointer;
+}
+h3 {
+    font-size:1.2rem;
+    margin-bottom: 2rem;
+}
+h4 {
+    font-size: 1rem;
+    letter-spacing: 0.07rem;
+    color: var(--secondaryColor);
+}
+h6 {
+    color: var(--primaryColor);
+}
+p {
+    color: var(--secondaryColor);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.25rem;
+}
+/*======================
+========= Home =========
+=======================*/
+.home {
+    width:100%;
+    height: 100vh;
+    background-color: var(--bgColor1);
+    display: flex;
+    flex-direction: column;
+}
+.navbar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem var(--padding);
+}
+.menu a {
+    font-family: 'Josefin Sans',sans-serif;
+    font-size: 0.86rem;
+    color:var(--lightColor);
+    text-align: center;
+    margin:0.8rem 1.5rem;
+    transition:0.35s;
+}
+.menu a:hover {
+    color: var(--primaryColor);
+}
+.btn {
+    color:var(--lightColor);
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color:var(--primaryColor);
+    border: 2px solid transparent;
+    padding:0.6rem 1.67em 0.5rem 1.67em;
+    border-radius:30px;
+    transition: 0.3s
+}
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid var(--primaryColor);
+}
+.content {
+    flex-grow:1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--padding);
+}
+.social-media {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+.social-media img {
+    width:30px;
+    margin-right: 1rem;
+    transition: 0.3s;
+}
+.social-media img:hover {
+    transform: scale(1.16);
+}
+
+.img-container {
+    width: 45%;
+    height: 92%;
+    position: relative;
+    align-self: flex-end;
+}
+.img-container .shape {
+    left:50%;
+    transform: translateX(-50%);
+    height:80%;
+    position: absolute;
+    bottom:0;
+    transition: bottom 1s;
+}
+.img-container:hover .shape{
+    bottom:25px;
+}
+.img-container .photo {
+    left:50%;
+    transform: translateX(-50%);
+    height:100%;
+    position: absolute;
+    bottom: 0;
+    transition: left 1s;
+}
+.img-container:hover .photo {
+    left:44.5%;
+}
+
+/*======================
+========= About =========
+=======================*/
+.about {
+    width: 100%;
+    background-color: var(--bgColor2);
+    padding: 1.5rem var(--padding) 2.2rem var(--padding);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.about .about-images {
+    width: 36%;
+}
+.about .about-images img {
+    width: 90%;
+}
+.about .about-texts {
+    width: 40%;
+}
+
+/*======================
+========= Services =========
+=======================*/
+.services {
+    width: 100%;
+    padding: 2rem var(--padding);
+    background-color: var(--bgColor1);
+    text-align: center;
+}
+.dev-types {
+    margin: 2.6rem 0 1rem 0;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(4,1fr);
+    gap:3rem;
+}
+.item {
+    background-color: var(--bgColor2);
+    border-radius: 0.8rem;
+    padding: 2rem 2rem;
+    transition: 0.3s;
+}
+.item:hover {
+    transform: scale(105%);
+}
+.fa-solid {
+    color: var(--primaryColor);
+    margin-bottom: 2rem;
+}
+
+/*======================
+========= Skills =========
+=======================*/
+.skills {
+    width: 100%;
+    background-color: var(--bgColor2);
+    padding: 2.2rem var(--padding);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.skills .about-images {
+    width: 35%;
+}
+.skills .about-images img {
+    width: 80%;
+}
+.skills .about-texts {
+    width: 35%;
+}
+.myskills {
+    display:flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding: 1.5rem 0;
+}
+.myskills img {
+    width:3.5rem;
+    cursor: pointer;
+}
+
+/*======================
+========= Contact =========
+=======================*/
+.contact {
+    background-color: var(--bgColor1);
+    text-align: center;
+}
+footer {
+    background-color: var(--bgColor1);
+    text-align: center;
+}
+footer {
+    padding:1.9rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content p {
+ margin: 1.5rem 0;
+}
+
+/*======================
+===== Menu icon ====
+=======================*/
+#menu-icon {
+    display: none;
+    position: relative;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    appearance: none;
+    user-select:none;
+}
+#menu-icon span {
+    display: block;
+    background-color: white;
+    height: 4px;
+    width: 33px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.3s;
+}
+    #menu-icon.is-active span:nth-child(1) {
+        transform: rotate(46deg) translate(0,0);
+        background-color: var(--primaryColor);
+    }
+    #menu-icon.is-active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    #menu-icon.is-active span:nth-child(3) {
+        transform: rotate(-45deg) translate(-6px,2px);
+        background-color: var(--primaryColor);
+    }
+
+
+/*======================
+===== Media Queries ====
+=======================*/
+@media only screen and (max-width:575px) {
+    :root {
+        --padding: 5%;
+    }
+    html {
+        font-size: 13px;
+    }
+    .home h3 {
+        margin:2rem 0 3rem 0;
+    }
+    .home h1 {
+        margin:2rem 0;
+    }
+    .navbar .btn, .img-container, .about-images {
+        display: none;
+    }
+    .menu {
+        display: none;
+        background-color: var(--bgColor2);
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top:0;
+        bottom:0;
+        left: 0;
+        right:0;
+        padding:8rem 0;
+    }
+    .menu.is-active {
+        display: block;
+    }
+    #menu-icon {
+        display: block;
+    }
+    .menu a {
+        display: block;
+        font-size: 1.5rem;
+        margin: 3rem 0;
+    }
+    .navbar {
+        padding: 1.5rem var(--padding) 1rem var(--padding);
+        position: fixed;
+        left:0;
+        top:0;
+        right:0;
+        height:4.5rem;
+        background-color: var(--bgColor1);
+    }
+    .about .about-texts, .skills .about-images, .skills .about-texts {
+        width: 100%;
+    }
+    .social-media {
+        margin-bottom: 0;
+    }
+    .dev-types {
+        grid-template-columns: 1fr;
+    }
+    .skills {
+        flex-direction: column;
+    }
+
+}
+
+/*===============================*/
+@media only screen and (min-width:576px) and (max-width: 767px) {
+    :root {
+        --padding: 5%;
+    }
+    html {
+        font-size: 13px;
+    }
+    .home h1 {
+        margin:1rem 0;
+    }
+    .content {
+        padding-top: 3.8rem;
+    }
+    .social-media {
+        margin-top: 2.5rem;
+    }
+    .navbar .btn, .img-container, .about-images {
+        display: none;
+    }
+    .menu {
+        display: none;
+        background-color: var(--bgColor2);
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top:0;
+        bottom:0;
+        left: 0;
+        right:0;
+        padding:2.5rem 0;
+    }
+    .menu.is-active {
+        display: block;
+    }
+    #menu-icon {
+        display: block;
+    }
+    .menu a {
+        display: block;
+        font-size: 1.5rem;
+        margin: 2.8rem 0;
+    }
+    .navbar {
+        padding: 1.5rem var(--padding) 1rem var(--padding);
+        position: fixed;
+        left:0;
+        top:0;
+        right:0;
+        height:4.5rem;
+        background-color: var(--bgColor1);
+    }
+    .about .about-texts, .skills .about-images, .skills .about-texts {
+        width: 100%;
+    }
+    .social-media {
+        margin-bottom: 0;
+    }
+    .dev-types {
+        grid-template-columns: 1fr 1fr;
+    }
+    .skills {
+        flex-direction: column;
+    }
+
+}
+
+/*===============================*/
+@media screen and (min-width: 768px) and (max-width: 810px){
+    .navbar .btn, .img-container{
+        display: none;
+    }
+    .dev-types {
+        grid-template-columns: 1fr 1fr;
+    }
+    .menu {
+        display: none;
+        background-color: var(--bgColor2);
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top:0;
+        bottom:0;
+        left: 0;
+        right:0;
+        padding:8rem 0;
+    }
+    .menu.is-active {
+        display: block;
+    }
+    #menu-icon {
+        display: block;
+    }
+    .menu a {
+        display: block;
+        font-size: 1.5rem;
+        margin: 3rem 0;
+    }
+    .navbar {
+        padding: 1.5rem var(--padding) 1rem var(--padding);
+        position: fixed;
+        left:0;
+        top:0;
+        right:0;
+        height:4.5rem;
+        background-color: var(--bgColor1);
+    }
+
+}
+
+/*================================*/
+@media screen and (min-width: 811px) and (max-width: 1080px) {
+    .img-container .shape {
+        height:65%;
+    }
+    .img-container .photo {
+        height:90%;
+    }
+}
